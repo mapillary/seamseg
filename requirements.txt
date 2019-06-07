@@ -1,0 +1,8 @@
+pillow
+numpy
+umsgpack
+torchvision
+tqdm
+scikit-image
+pycocotools
+git+git://github.com/waspinator/pycococreator.git@0.2.0
