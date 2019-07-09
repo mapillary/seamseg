@@ -58,7 +58,11 @@ setuptools.setup(
     # Package description
     packages=[
         "seamseg",
+        "seamseg.algos",
         "seamseg.config",
+        "seamseg.models",
+        "seamseg.modules",
+        "seamseg.modules.heads",
         "seamseg.utils",
         "seamseg.utils.bbx",
         "seamseg.utils.nms",
