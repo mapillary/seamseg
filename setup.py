@@ -56,7 +56,13 @@ setuptools.setup(
     python_requires=">=3, <4",
 
     # Package description
-    packages=["seamseg"],
+    packages=[
+        "seamseg",
+        "seamseg.utils",
+        "seamseg.utils.bbx",
+        "seamseg.utils.nms",
+        "seamseg.utils.roi_sampling",
+    ],
     ext_modules=[
         make_extension("nms", "seamseg.utils"),
         make_extension("bbx", "seamseg.utils"),
