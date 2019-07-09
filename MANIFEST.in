@@ -1,2 +1,3 @@
 include README.md
 include LICENSE
+include seamseg/config/defaults/*.ini

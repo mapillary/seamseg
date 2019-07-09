@@ -58,6 +58,7 @@ setuptools.setup(
     # Package description
     packages=[
         "seamseg",
+        "seamseg.config",
         "seamseg.utils",
         "seamseg.utils.bbx",
         "seamseg.utils.nms",
@@ -69,5 +70,6 @@ setuptools.setup(
         make_extension("bbx", "seamseg.utils"),
         make_extension("roi_sampling", "seamseg.utils")
     ],
-    cmdclass={"build_ext": BuildExtension}
+    cmdclass={"build_ext": BuildExtension},
+    include_package_data=True,
 )
