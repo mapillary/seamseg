@@ -61,6 +61,7 @@ setuptools.setup(
         "seamseg.utils",
         "seamseg.utils.bbx",
         "seamseg.utils.nms",
+        "seamseg.utils.parallel",
         "seamseg.utils.roi_sampling",
     ],
     ext_modules=[
