@@ -152,7 +152,7 @@ def make_model(config, num_thing, num_stuff):
         fpn_config.getstruct("out_strides"), rpn_config.getint("fpn_min_level"), rpn_config.getint("fpn_levels"))
     rpn_head = RPNHead(
         fpn_config.getint("out_channels"), len(rpn_config.getstruct("anchor_ratios")), 1,
-        rpn_config.getint("hidden_channels"), norm_act_static)
+        rpn_config.getint("hidden_channels"), norm_act_dynamic)
 
     # Create detection network
     prediction_generator = PredictionGenerator(roi_config.getfloat("nms_threshold"),

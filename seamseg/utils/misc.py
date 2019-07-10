@@ -76,12 +76,16 @@ def norm_act_from_config(body_config):
     Available normalization modes are:
       - `bn`: Standard In-Place Batch Normalization
       - `syncbn`: Synchronized In-Place Batch Normalization
-      - `syncbn+bn`: Synchronized In-Place Batch Normalization in the static part of the network, Standard In-Place
-        Batch Normalization in the dynamic parts
+      - `syncbn+bn`: Synchronized In-Place Batch Normalization in the "static" part of the network, Standard In-Place
+        Batch Normalization in the "dynamic" parts
       - `gn`: Group Normalization
-      - `syncbn+gn`: Synchronized In-Place Batch Normalization in the static part of the network, Group Normalization
-        in the dynamic parts
+      - `syncbn+gn`: Synchronized In-Place Batch Normalization in the "static" part of the network, Group Normalization
+        in the "dynamic" parts
       - `off`: No normalization (preserve scale and bias parameters)
+
+    The "static" part of the network includes the backbone, FPN and semantic segmentation components, while the
+    "dynamic" part of the network includes the RPN, detection and instance segmentation components. Note that this
+    distinction is due to historical reasons and for back-compatibility with the CVPR2019 pre-trained models.
 
     Parameters
     ----------
