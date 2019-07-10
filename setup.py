@@ -60,6 +60,7 @@ setuptools.setup(
         "seamseg",
         "seamseg.algos",
         "seamseg.config",
+        "seamseg.data",
         "seamseg.models",
         "seamseg.modules",
         "seamseg.modules.heads",
