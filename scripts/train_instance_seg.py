@@ -30,7 +30,7 @@ from seamseg.utils.misc import config_to_string, scheduler_from_config, norm_act
 from seamseg.utils.parallel import DistributedDataParallel
 from seamseg.utils.snapshot import save_snapshot, resume_from_snapshot, pre_train_from_snapshots
 
-parser = argparse.ArgumentParser(description="Mask R-CNN training script")
+parser = argparse.ArgumentParser(description="Instance segmentation training script")
 parser.add_argument("--local_rank", type=int)
 parser.add_argument("--log_dir", type=str, default=".", help="Write logs to the given directory")
 parser.add_argument("--resume", metavar="FILE", type=str, help="Resume training from given file")
@@ -57,7 +57,7 @@ def log_info(msg, *args, **kwargs):
 def make_config(args):
     log_debug("Loading configuration from %s", args.config)
 
-    conf = load_config(args.config, DEFAULT_CONFIGS["mask_rcnn"])
+    conf = load_config(args.config, DEFAULT_CONFIGS["instance_seg"])
 
     log_debug("\n%s", config_to_string(conf))
     return conf

@@ -33,7 +33,7 @@ from seamseg.utils.panoptic import PanopticPreprocessing
 from seamseg.utils.parallel import DistributedDataParallel
 from seamseg.utils.snapshot import resume_from_snapshot
 
-parser = argparse.ArgumentParser(description="Mask R-CNN training script")
+parser = argparse.ArgumentParser(description="Panoptic testing script")
 parser.add_argument("--local_rank", type=int)
 parser.add_argument("--log_dir", type=str, default=".", help="Write logs to the given directory")
 parser.add_argument("--meta", type=str, help="Path to metadata file of training dataset")
@@ -60,7 +60,7 @@ def log_info(msg, *args, **kwargs):
 def make_config(args):
     log_debug("Loading configuration from %s", args.config)
 
-    conf = load_config(args.config, DEFAULT_CONFIGS["mask_rcnn_sem"])
+    conf = load_config(args.config, DEFAULT_CONFIGS["panoptic"])
 
     log_debug("\n%s", config_to_string(conf))
     return conf

@@ -2,7 +2,7 @@ import logging
 from math import log10
 from os import path
 
-from .metrics import AverageMeter
+from .meters import AverageMeter
 
 _NAME = "seamseg"
 

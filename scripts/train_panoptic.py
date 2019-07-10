@@ -27,12 +27,12 @@ from seamseg.modules.heads import FPNMaskHead, RPNHead, FPNSemanticHeadDeeplab
 from seamseg.utils import logging
 from seamseg.utils.meters import AverageMeter, ConfusionMatrixMeter
 from seamseg.utils.misc import config_to_string, scheduler_from_config, norm_act_from_config, freeze_params, \
-    all_reduce_losses
+    all_reduce_losses, NORM_LAYERS, OTHER_LAYERS
 from seamseg.utils.panoptic import panoptic_stats, PanopticPreprocessing
 from seamseg.utils.parallel import DistributedDataParallel
 from seamseg.utils.snapshot import save_snapshot, resume_from_snapshot, pre_train_from_snapshots
 
-parser = argparse.ArgumentParser(description="Mask R-CNN + segmentation training script")
+parser = argparse.ArgumentParser(description="Panoptic training script")
 parser.add_argument("--local_rank", type=int)
 parser.add_argument("--log_dir", type=str, default=".", help="Write logs to the given directory")
 parser.add_argument("--resume", metavar="FILE", type=str, help="Resume training from given file")
@@ -67,7 +67,7 @@ def log_miou(miou, classes):
 def make_config(args):
     log_debug("Loading configuration from %s", args.config)
 
-    conf = load_config(args.config, DEFAULT_CONFIGS["mask_rcnn_sem"])
+    conf = load_config(args.config, DEFAULT_CONFIGS["panoptic"])
 
     log_debug("\n%s", config_to_string(conf))
     return conf
