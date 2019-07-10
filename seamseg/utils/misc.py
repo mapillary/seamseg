@@ -4,10 +4,14 @@ from functools import partial
 
 import torch
 import torch.distributed as dist
-from inplace_abn import InPlaceABN, InPlaceABNSync
-from seamseg.modules.misc import ActivatedAffine, ActivatedGroupNorm
+import torch.nn as nn
+from inplace_abn import InPlaceABN, InPlaceABNSync, ABN
 
+from seamseg.modules.misc import ActivatedAffine, ActivatedGroupNorm
 from . import scheduler as lr_scheduler
+
+NORM_LAYERS = [ABN, nn.BatchNorm1d, nn.BatchNorm2d, nn.BatchNorm3d, nn.GroupNorm]
+OTHER_LAYERS = [nn.Linear, nn.Conv1d, nn.Conv2d, nn.Conv3d, nn.ConvTranspose1d, nn.ConvTranspose2d, nn.ConvTranspose3d]
 
 
 class Empty(Exception):
