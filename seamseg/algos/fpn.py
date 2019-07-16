@@ -1,9 +1,9 @@
 import torch
+from inplace_abn import active_group, set_active_group
 
 from seamseg.utils.bbx import shift_boxes
 from seamseg.utils.misc import Empty
 from seamseg.utils.parallel import PackedSequence
-from seamseg.utils.parallel.dist_group import active_group, set_active_group
 from seamseg.utils.roi_sampling import roi_sampling
 from .detection import DetectionAlgo
 from .instance_seg import InstanceSegAlgo
@@ -189,17 +189,6 @@ class DetectionAlgoFPN(DetectionAlgo):
 
         # Run head
         return head(rois)
-
-    def _fake_head(self, head, x, img_size):
-        bbx = x[0].new_tensor([[0, 0, self.roi_size[0], self.roi_size[1]]])
-        idx = x[0].new_tensor([0], dtype=torch.long)
-
-        rois = []
-        for level_i, x_i in enumerate(x):
-            rois.append(self._rois(x_i, bbx, idx, img_size))
-        rois = torch.cat(rois, dim=0)
-
-        return head.fake_forward(rois)
 
     def training(self, head, x, proposals, bbx, cat, iscrowd, img_size):
         x = x[self.min_level:self.min_level + self.levels]
