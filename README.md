@@ -120,3 +120,8 @@ written to `OUTPUT_DIR`.
 The script also requires to be given the `metadata.bin` file of the dataset the network was originally trained on.
 Note that the script will only read from the `"meta"` section, meaning that a stripped-down version of `metadata.bin`,
 i.e. without the `"images"` section, can also be used.
+
+By default, the test scripts output "qualitative" results, i.e. the original images superimposed with their panoptic segmentation.
+This can be changed by setting the `--raw` flag: in this case, the script will output, for each image, the "raw" network
+output as a PyTorch `.pth.tar` file.
+An additional script to process these raw outputs into COCO-format panoptic predictions will be released soon.
