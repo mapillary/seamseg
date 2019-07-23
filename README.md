@@ -1,7 +1,7 @@
 # Seamless Scene Segmentation
 
 <p align="center">
-<img src="network.png" width="70%"/>
+<img src="network.png" width="100%"/>
 <br>
 <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Porzi_Seamless_Scene_Segmentation_CVPR_2019_paper.html">CVPR</a>
 |
