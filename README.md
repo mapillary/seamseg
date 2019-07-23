@@ -14,7 +14,7 @@ advantage of a novel segmentation head that seamlessly integrates multi-scale fe
 Network with contextual information conveyed by a light-weight DeepLab-like module.
 
 This repository contains training and evaluation Pytorch code, based on our re-implementation of the Mask R-CNN
-framework, as well as pre-trained models to reproduce the Mapillary Vistas results from our paper.
+framework. Pre-trained models to reproduce the Mapillary Vistas results from our paper will be published soon.
 
 If you use Seamless Scene Segmentation in your research, please cite:
 ```bibtex
