@@ -66,7 +66,7 @@ decide to load the local copy of the `seamseg` package instead of the one instal
 ## Using the scripts
 
 Our code uses an intermediate data format to ease training on multiple datasets, described
-[here](wiki/Seamless-Scene-Segmentation-dataset-format).
+[here](https://github.com/mapillary/seamseg/wiki/Seamless-Scene-Segmentation-dataset-format).
 We provide pre-made scripts to convert from [Cityscapes](scripts/data_preparation/prepare_cityscapes.py) and
 [Mapillary Vistas](scripts/data_preparation/prepare_vistas.py) to our format.
 
@@ -83,7 +83,7 @@ where `NET_NAME` is one of `resnet18`, `resnet34`, `resnet50`, `resnet101` or `r
 
 Training involves three main steps: Preparing the dataset, creating a configuration file and running the training
 script.
-To prepare the dataset, refer to the format description [here](wiki/Seamless-Scene-Segmentation-dataset-format), or
+To prepare the dataset, refer to the format description [here](https://github.com/mapillary/seamseg/wiki/Seamless-Scene-Segmentation-dataset-format), or
 use one of the scripts in [scripts/data_preparation](scripts/data_preparation).
 The configuration file is a simple text file in `ini` format.
 The default value of each configuration parameter, as well as a short description of what it does, is available in
