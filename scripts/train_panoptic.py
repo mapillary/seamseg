@@ -161,7 +161,7 @@ def make_model(config, num_thing, num_stuff):
     rpn_loss = RPNLoss(rpn_config.getfloat("sigma"))
     rpn_algo = RPNAlgoFPN(
         proposal_generator, anchor_matcher, rpn_loss,
-        rpn_config.getint("anchor_scales"), rpn_config.getstruct("anchor_ratios"),
+        rpn_config.getint("anchor_scale"), rpn_config.getstruct("anchor_ratios"),
         fpn_config.getstruct("out_strides"), rpn_config.getint("fpn_min_level"), rpn_config.getint("fpn_levels"))
     rpn_head = RPNHead(
         fpn_config.getint("out_channels"), len(rpn_config.getstruct("anchor_ratios")), 1,
