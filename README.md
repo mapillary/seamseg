@@ -65,7 +65,7 @@ decide to load the local copy of the `seamseg` package instead of the one instal
 
 ## Trained models
 
-The model files provided below are made available under the [license attached to ImageNet](http://www.image-net.org/download-faq).
+The model files provided below are made available under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 | Model | PQ | Link + md5 |
 |-------|----|------------|
