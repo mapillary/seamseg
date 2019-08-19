@@ -73,7 +73,7 @@ The model files provided below are made available under the [CC BY-NC-SA 4.0](ht
 
 [1]: https://drive.google.com/file/d/1ULhd_CZ24L8FnI9lZ2H6Xuf03n6NA_-Y/view
 
-The files linked above are `zip` archives, each containing model weights (`.tar` file) and configuration parameters (`config.ini` file).
+The files linked above are `zip` archives, each containing model weights (`.tar` file), configuration parameters (`config.ini` file) and the metadata file of the dataset the model was trained on (`metadata.bin` file).
 To use a model, unzip it somewhere and follow the instructions in the [Running inference"](#running-inference) section below.
 
 ## Using the scripts
