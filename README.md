@@ -69,7 +69,7 @@ The model files provided below are made available under the [CC BY-NC-SA 4.0](ht
 
 | Model | PQ | Link + md5 |
 |-------|----|------------|
-| SeamSeg ResNet50, Mapillary Vistas | 37.99 | [c5f0def83983102afe8dde1295c5c7da][1] |
+| SeamSeg ResNet50, Mapillary Vistas | 37.99 | [7046e54e54e9dcc38060b150e97f4a5a][1] |
 
 [1]: https://drive.google.com/file/d/1ULhd_CZ24L8FnI9lZ2H6Xuf03n6NA_-Y/view
 
