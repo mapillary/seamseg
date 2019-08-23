@@ -35,6 +35,7 @@ Main system requirements:
 
 **IMPORTANT NOTE**: These requirements are not necessarily stringent, e.g. it might be possible to compile with older
 versions of CUDA, or under Windows. However, we have only tested the code under the above settings and cannot provide support for other setups.
+**IMPORTANT NOTE 2**: Due to some breaking changes in the handling of boolean operations, seamseg is currently not compatible with Pytorch v1.2.0 or newer.
 
 To install PyTorch, please refer to https://github.com/pytorch/pytorch#installation.
 
