@@ -103,6 +103,8 @@ use one of the scripts in [scripts/data_preparation](scripts/data_preparation).
 The configuration file is a simple text file in `ini` format.
 The default value of each configuration parameter, as well as a short description of what it does, is available in
 [seamseg/config/defaults](seamseg/config/defaults).
+**Note** that these are just an indication of what a "reasonable" value for each parameter could be, and are not
+meant as a way to reproduce any of the results from our paper.
 
 To launch the training:
 ```bash
