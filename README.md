@@ -124,6 +124,23 @@ annotations.
 results that are equivalent to the [official implementation](https://github.com/cocodataset/panopticapi), minus
 numerical differences.
 
+#### Training with the Vistas settings from our paper:
+```bash
+cd scripts
+python -m torch.distributed.launch --nproc_per_node=8 \
+    train_panoptic.py --log_dir LOG_DIR \
+    configurations/vistas_r50.ini DATA_DIR
+```
+
+#### Training with the Cityscapes settings from our paper:
+```bash
+cd scripts
+python -m torch.distributed.launch --nproc_per_node=8 \
+    train_panoptic.py --log_dir LOG_DIR \
+    --pre_train VISTAS_MODEL -- \
+    configurations/cityscapes_r50.ini DATA_DIR
+```
+
 ### Running inference
 
 Given a trained network, inference can be run on any set of images using
