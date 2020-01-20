@@ -137,7 +137,6 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 cd scripts
 python -m torch.distributed.launch --nproc_per_node=8 \
     train_panoptic.py --log_dir LOG_DIR \
-    --pre_train VISTAS_MODEL -- \
     configurations/cityscapes_r50.ini DATA_DIR
 ```
 
