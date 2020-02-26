@@ -1,3 +1,4 @@
+[![Run on Repl.it](https://repl.it/badge/github/mapillary/seamseg)](https://repl.it/github/mapillary/seamseg)
 # Seamless Scene Segmentation
 
 <p align="center">
