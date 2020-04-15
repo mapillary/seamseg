@@ -215,7 +215,7 @@ class AnchorMatcher:
                         max_a2g_iou[replace_idx] = iou_max[replace_idx]
 
                         # GT -> Anchor
-                        max_g2a_iou_j, max_g2a_idx_j = iou.max(dim=0)
+                        max_g2a_iou_j, max_g2a_idx_j = iou.transpose(0, 1).max(dim=1)
                         max_g2a_iou.append(max_g2a_iou_j)
                         max_g2a_idx.append(max_g2a_idx_j)
 
