@@ -127,8 +127,8 @@ class InstanceSegAlgo:
                 boxes_out.append(boxes_i)
                 scores_out.append(scores[idx])
             else:
-                boxes.append(None)
-                scores.append(None)
+                boxes_out.append(None)
+                scores_out.append(None)
 
         return boxes_out, scores_out
 
