@@ -1,4 +1,4 @@
-pillow<7.0
+pillow
 numpy
 umsgpack
 torchvision==0.3
