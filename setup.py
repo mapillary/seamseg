@@ -3,6 +3,8 @@ from os import path, listdir
 import setuptools
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
+here = path.abspath(path.dirname(__file__))
+
 
 def find_sources(root_dir):
     sources = []
@@ -22,11 +24,9 @@ def make_extension(name, package):
             "cxx": ["-O3"],
             "nvcc": ["--expt-extended-lambda"],
         },
-        include_dirs=["include/"],
+        include_dirs=[path.join(here, "include")],
     )
 
-
-here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
