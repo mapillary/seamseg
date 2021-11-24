@@ -1,3 +1,5 @@
+# Copyright (c) Facebook, Inc. and its affiliates.
+
 import torch
 import torch.autograd as autograd
 from torch.autograd.function import once_differentiable
