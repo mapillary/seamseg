@@ -277,7 +277,7 @@ def save_prediction_image(_, panoptic_pred, img_info, out_dir, colors, num_stuff
     contours_img = contours_img.resize(img_info["original_size"][::-1])
 
     # Compose final image and save
-    out = Image.blend(img, sem_img, 0.5).convert(mode="RGBA")
+    out = Image.blend(img.convert(mode="RGB"), sem_img, 0.5).convert(mode="RGBA")
     out = Image.alpha_composite(out, contours_img)
     out.convert(mode="RGB").save(out_path)
 
